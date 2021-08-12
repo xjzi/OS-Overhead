@@ -19,17 +19,15 @@ fn panic(info: &PanicInfo) -> ! {
 pub extern "C" fn _start() -> ! {
     println!("Starting hashing.");
 
-    let start = tsc::start();
+    let start = tsc::get_timestamp();
 
     work::work();
 
-    let stop = tsc::stop();
+    let stop = tsc::get_timestamp();
 
     let duration = stop - start;
 
     println!("Hashing completed.");
-    println!("Started at: {}", start);
-    println!("Stopped at: {}", stop);
     println!("Duration: {}", duration);
 
     loop {}
