@@ -6,7 +6,7 @@ I was wondering how the overhead of an operating system would affect the executi
 In order to test the program on your system run the following commands.
 ```
 cd os
-cargo run --release
+cargo +stable run --release
 ```
 
 In order to test the bare metal version of the program, run the following commands, then restart your computer into the bootloader for the program.
