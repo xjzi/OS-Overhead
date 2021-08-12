@@ -1,7 +1,7 @@
 # OS-Overhead
 I was wondering how the overhead of an operating system would affect the execution speed of a program. If skipping the Linux kernel by booting into a program could significantly speed up the program, this could be used in many contexts to improve performance.
 
-I used the Blake2 hashing library for Rust to mock the work of the program. For both the Linux test and the bare metal test, I used the  time stamp counter on 64-bit CPU's to profile the execution time.
+I used the [Blake2 hashing library for Rust](https://crates.io/crates/blake2) to mock the work of the program. For both the Linux test and the bare metal test, I used the [time stamp counter](https://en.wikipedia.org/wiki/Time_Stamp_Counter) on 64-bit CPU's to profile the execution time.
 Philipp Oppermann's blog for a [Rust operating system](https://os.phil-opp.com/) helped me create the standalone bootable binary.
 
 ## Tests
